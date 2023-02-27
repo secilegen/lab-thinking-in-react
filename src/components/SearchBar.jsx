@@ -7,7 +7,9 @@ function SearchBar(props){
             <h3>Search</h3>
             <input type="text" onChange={(e)=>{props.performSearch(e.target.value)}}/>
             <p>Only show products in stock</p>
-            <input type="checkbox" onChange={(e)=>{props.checkBox(e.target.value)}} />
+            <input type="checkbox" onChange={(e)=>{
+                props.checkBox(e.target.checked)
+            }} />
         </div>
     )
 }

@@ -18,9 +18,14 @@ function ProductsPage(){
     }
 
     const checkBox = (value) => {
-        const instock = products.filter((value)=> {return value.inStock === true})
-
+        if (value===true) {
+        const instock = products.filter((product)=> {return product.inStock === true})
         setProducts (instock)
+
+        }
+        else {
+            setProducts(jsonData)
+        }
     }
 
 
