@@ -5,13 +5,13 @@ import SearchBar from "./SearchBar";
 
 function ProductsPage(){
     const [products, setProducts] = useState(jsonData);
-    const [search, setSearch] = useState('');
+    // const [search, setSearch] = useState('');
 
     const performSearch = (value) => {
 
-        setSearch(value)
+        // setSearch(value)
 
-        const productsCopy =   products.filter((string)=>{ return string.name.toLowerCase().includes(search.toLowerCase())})
+        const productsCopy =   jsonData.filter((string)=>{ return string.name.toLowerCase().includes(value.toLowerCase())})
 
         setProducts(productsCopy)
         
